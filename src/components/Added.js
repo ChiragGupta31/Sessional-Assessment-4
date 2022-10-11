@@ -18,6 +18,7 @@ export default function Added() {
             <th>Position</th>
             <th>Players</th>
             <th>Ratings</th>
+            <th>Role</th>
           </tr>
 
         </thead>
@@ -29,6 +30,7 @@ export default function Added() {
                   <td>{item.a}</td>
                   <td>{item.b}</td>
                   <td>{item.c}</td>
+                  <td>{item.d}</td>
 
                 </tr>
               )

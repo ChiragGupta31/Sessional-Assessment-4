@@ -10,12 +10,13 @@ export default function Form() {
   const [position, setposition] = useState('');
   const [player, setplayer] = useState('');
   const [rating, setrating] = useState('');
+  const[role,setrole]=useState('');
 
   let history = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    let a = position, b = player, c = rating;
-    Cricketers.push({ a, b, c });
+    let a = position, b = player, c = rating,d =role;
+    Cricketers.push({ a, b, c, d });
     // console.log(Cricketers);
     history('/added');
 
@@ -32,6 +33,9 @@ export default function Form() {
         <input type="text"   placeholder='Enter Name' onChange={(e) => setplayer(e.target.value)} required></input><br></br>
         <label >Rating</label><br></br>
         <input type="number" placeholder='Enter Rating' onChange={(e) => setrating(e.target.value)} required></input><br></br>
+        <label >Role</label><br></br>
+        <input type="text" placeholder='Enter Role' onChange={(e) => setrole(e.target.value)} required></input><br></br>
+
         <Link to='/added'>
           <input className='btn' type="submit" onClick={handleSubmit}></input>
         </Link>
